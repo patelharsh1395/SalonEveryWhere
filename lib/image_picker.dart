@@ -75,7 +75,7 @@ class _ImagepickerState extends State<Imagepicker> {
             //     : Image.file(_image),
             child: CircleAvatar(
               radius: 55,
-              backgroundColor: Color(0xffFDCF09),
+              backgroundColor: Colors.red,
               child: _image != null
                   ? ClipRRect(
                       borderRadius: BorderRadius.circular(50),
@@ -94,7 +94,7 @@ class _ImagepickerState extends State<Imagepicker> {
                       height: 100,
                       child: Icon(
                         Icons.account_circle,
-                        color: Colors.grey[800],
+                        color: Colors.red,
                       ),
                     ),
             ),
@@ -102,7 +102,8 @@ class _ImagepickerState extends State<Imagepicker> {
           FloatingActionButton(
             tooltip: 'Pick Image',
             onPressed: ()=> {_showPicker(context)},
-            child: Icon(Icons.add_a_photo),
+            backgroundColor: Colors.white,
+            child: Icon(Icons.add_a_photo, color: Colors.red,),
           )
         ],
       ),

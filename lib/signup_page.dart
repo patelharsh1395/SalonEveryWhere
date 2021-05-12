@@ -10,6 +10,7 @@ class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red,
       appBar: AppBar(
         title: Text("Signup"),
       ),
@@ -18,30 +19,40 @@ class Signup extends StatelessWidget {
           Container(child: Imagepicker()),
           Card(
               child: Container(
-                padding: EdgeInsets.all(10),
-                child: Column(
-            children: [
+               
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: [
                 TextField(
+                  cursorColor: Colors.red,
                   decoration: InputDecoration(
-                      labelText: "Full Name", focusColor: Colors.lightGreen),
+                      labelText: "Full Name", focusColor: Colors.lightGreen, fillColor: Colors.white70 , hoverColor:Colors.lightGreen ),
                   controller: fullname,
                 ),
                 TextField(
+                  cursorColor: Colors.red,
                   decoration: InputDecoration(
                       labelText: "Email", focusColor: Colors.lightGreen),
                   controller: email,
                 ),
                 TextField(
+                   cursorColor: Colors.red,
+                   
                   decoration: InputDecoration(
                       labelText: "Password", focusColor: Colors.lightGreen),
                   controller: password,
                 ),
-                FloatingActionButton(onPressed: ()=> {
-
-                }, child: Text("Submit"),)
-            ],
-          ),
-              ))
+                Container(
+                    child: RaisedButton(
+                  color: Colors.red,
+                  child: Text("Submited"),
+                  onPressed: () => {print("")},
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                ))
+              ],
+            ),
+          ))
         ],
       ),
     );
